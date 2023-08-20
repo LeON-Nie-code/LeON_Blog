@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
+  initial-sacle=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap" rel="stylesheet"> 
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html"><img src="img/letter.png">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="/learn1/web.html">HOME</a></li>
+          <li><a href="/learn1/about.html">ABOUT</a></li>
+          <li><a href="/learn1/resource.html">RESOURCE</a></li>
+          <li><a href="">BLOG</a></li>
+          <li><a href="">CONTACT</a></li>
+        </ul>
+        <div class="icon">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-linkedin"></i>
+        </div>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+      
+    </nav>
+    <div class="text-box">
+      <h0>EVERYTHING</h0>
+      <h1>IS HERE</h1>
+      <p>A Mad Man<br> A Childlish Man<br> A Paradoxical Man</p>
+      <button class="hero-btn" onclick="scrollToSection()">Visit Me To Know More</button>
+    </div>
+  </section>
+
+  <!--Resources-->
+  <section class="res" id="res1">
+    <h1>RESOURCES</h1>
+    <div class="h1-block"></div>
+    <p>masionfoa jsofnm mkdmfa mkawfmn moasm, jsijai.</p>
+    
+    <div class="row">
+      <div class="res-col" href="">
+        <h3>Chat GPT</h3>
+        <p>THE MOST POWERFUL AI IN THE WORLD</p>
+      </div>
+      <div class="res-col">
+        <h3>BOOKS</h3>
+        <p>Z-library. Here you can find every book in the world</p>
+      </div>
+      <div class="res-col">
+        <h3>GAMES</h3>
+        <p>The latest video games</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="div-line">
+    
+  </section>
+
+
+  <!--Chat-GPT-->
+  <section class="chatgpt" id="">
+    <h1>ChatGPT</h1>
+    <div class="h1-block"></div>
+    <p>masionfoa jsofnm mkdmfa mkawfmn moasm, jsijai.</p>
+  </section>
+
+  <!--BOOKS-Z-library-->
+  <section class="books" id="">
+    <h1>Books</h1>
+    <div class="h1-block"></div>
+    <p>masionfoa jsofnm mkdmfa mkawfmn moasm, jsijai.</p>
+  </section>
+
+  <!--GAMES-->
+  <section class="games" id="">
+    <h1>Games</h1>
+    <div class="h1-block"></div>
+    <p>masionfoa jsofnm mkdmfa mkawfmn moasm, jsijai.</p>
+  </section>
+
+<section class="footer">
+  <h4>About me</h4>
+  <p>sdsdfa ef ef efe fe f  fwefwefwf we f  wefwefwfwfwefwf </p>
+  <div class="icon">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+  </div>
+  <p>Made with <i class="fa fa-heart-o"></i> by LeON</p>
+</section>
+
+  
+<!------JavaScript For Toggle Menu----- -->
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+      navLinks.style.right = "-200px";
+      
+    }
+
+    function scrollToSection() {
+    var section = document.getElementById("res1");
+    var currentPosition = window.pageYOffset; // 当前滚动位置
+    var targetPosition = section.offsetTop; // 目标滚动位置
+    var distance = targetPosition - currentPosition; // 滚动距离
+    var speed = 5; // 滚动速度，数值越大滚动越快
+
+    var scrollInterval = setInterval(function() {
+      if (distance > 0) {
+        // 向下滚动
+        window.scrollBy(0, speed);
+        distance -= speed;
+        // 如果滚动超出目标位置，将目标位置赋值给距离，以确保滚动到准确位置
+        if (distance <= speed) {
+          window.scrollBy(0, distance)
+          distance = 0;
+        }
+      } else if (distance < 0) {
+        // 向上滚动
+        window.scrollBy(0, -speed);
+        distance += speed;
+        // 如果滚动超出目标位置，将目标位置赋值给距离，以确保滚动到准确位置
+        if (distance >= 0) {
+          distance = targetPosition - window.pageYOffset;
+        }
+      } else {
+        // 滚动完成，清除定时器
+        clearInterval(scrollInterval);
+      }
+    }, 5); // 定时器的时间间隔，数值越小滚动越平滑
+}
+</script>
+
+</body>
+</html>

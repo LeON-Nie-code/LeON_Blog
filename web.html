@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
+  initial-sacle=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap" rel="stylesheet"> 
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html"><img src="img/letter.png">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="/learn1/web.html">HOME</a></li>
+          <li><a href="/learn1/about.html">ABOUT</a></li>
+          <li><a href="/learn1/resource.html">RESOURCE</a></li>
+          <li><a href="">BLOG</a></li>
+          <li><a href="">CONTACT</a></li>
+        </ul>
+        <div class="icon">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-linkedin"></i>
+        </div>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+      
+    </nav>
+    <div class="text-box">
+      <h0>Welcome to</h0>
+      <h1>LeON's Blog</h1>
+      <p>A Mad Man<br> A Childlish Man<br> A Paradoxical Man</p>
+      <button class="hero-btn" onclick="scrollToSection()">Visit Me To Know More</button>
+    </div>
+
+  </section>
+
+<!--Hobbies-->
+<section class="hobby" id="hobby1">
+<h1>Hobbies</h1>
+<p>masionfoa jsofnm mkdmfa mkawfmn moasm, jsijai.</p>
+
+<div class="row">
+  <div class="hobby-col">
+    <h3>Reading</h3>
+    <p>我以这一丛野草，在明与暗，生与死，过去与未来之际，献于友与仇，人与兽，爱者与不爱者之前作证。为我自己，为友与仇，人与兽，爱者与不爱者，我希望这野草的朽腐，火速到来。要不然，我先就未曾生存，这实在比死亡与朽腐更其不幸。</p>
+  </div>
+  <div class="hobby-col">
+    <h3>Film</h3>
+    <p>“You see? There are still faint glimmers of civilization left in this barbaric slaughterhouse that was once known as humanity. Indeed that's what we provide in our own modest, humble, insignificant - (sighs deeply). Oh, fuck it.
+
+      -M. Gustave, The Grand Budapest Hotel (2014)”</p>
+  </div>
+  <div class="hobby-col">
+    <h3>Game</h3>
+    <p>我以这一丛野草，在明与暗，生与死，过去与未来之际，献于友与仇，人与兽，爱者与不爱者之前作证。为我自己，为友与仇，人与兽，爱者与不爱者，我希望这野草的朽腐，火速到来。要不然，我先就未曾生存，这实在比死亡与朽腐更其不幸。</p>
+  </div>
+</div>
+</section>
+
+<!--history My picture-->
+
+<section class="history">
+  <h1>My Past</h1>
+  <p>School life</p>
+
+  <div class="row">
+    <div class="history-col">
+      <img src="img/unknown0.png">
+      <div class="layer">
+        <h3>SEVEN YEARS</h3>
+      </div>
+    </div>
+    <div class="history-col">
+      <img src="img/unknown0.png">
+      <div class="layer">
+        <h3>TWELVE YEARS</h3>
+      </div>
+    </div>
+    <div class="history-col">
+      <img src="img/unknown0.png">
+      <div class="layer">
+        <h3>EIGHTEEN YEARS</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="line">---------------</section>
+
+<section class="footer">
+  <h4>About me</h4>
+  <p>sdsdfa ef ef efe fe f  fwefwefwf we f  wefwefwfwfwefwf </p>
+  <div class="icon">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+  </div>
+  <p>Made with <i class="fa fa-heart-o"></i> by LeON</p>
+</section>
+
+  
+<!------JavaScript For Toggle Menu----- -->
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+      navLinks.style.right = "-200px";
+      
+    }
+
+    function scrollToSection() {
+    var section = document.getElementById("hobby1");
+    var currentPosition = window.pageYOffset; // 当前滚动位置
+    var targetPosition = section.offsetTop; // 目标滚动位置
+    var distance = targetPosition - currentPosition; // 滚动距离
+    var speed = 5; // 滚动速度，数值越大滚动越快
+
+    var scrollInterval = setInterval(function() {
+      if (distance > 0) {
+        // 向下滚动
+        window.scrollBy(0, speed);
+        distance -= speed;
+        // 如果滚动超出目标位置，将目标位置赋值给距离，以确保滚动到准确位置
+        if (distance <= speed) {
+          window.scrollBy(0, distance)
+          distance = 0;
+        }
+      } else if (distance < 0) {
+        // 向上滚动
+        window.scrollBy(0, -speed);
+        distance += speed;
+        // 如果滚动超出目标位置，将目标位置赋值给距离，以确保滚动到准确位置
+        if (distance >= 0) {
+          distance = targetPosition - window.pageYOffset;
+        }
+      } else {
+        // 滚动完成，清除定时器
+        clearInterval(scrollInterval);
+      }
+    }, 5); // 定时器的时间间隔，数值越小滚动越平滑
+}
+</script>
+
+</body>
+</html>

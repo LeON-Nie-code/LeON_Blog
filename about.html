@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
+  initial-sacle=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap" rel="stylesheet"> 
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html"><img src="img/letter.png">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="/learn1/web.html">HOME</a></li>
+          <li><a href="/learn1/about.html">ABOUT</a></li>
+          <li><a href="/learn1/resource.html">RESOURCE</a></li>
+          <li><a href="">BLOG</a></li>
+          <li><a href="">CONTACT</a></li>
+        </ul>
+        <div class="icon">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-linkedin"></i>
+        </div>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+      
+    </nav>
+
+
+    <div class="text-box">
+      <h0>THIS IS</h0>
+      <h1>About</h1>
+      <p>A Mad Man<br> A Childlish Man<br> A Paradoxical Man</p>
+      <a href="" class="hero-btn">Visit Me To Know More</a>
+    </div>
+
+  </section>
+
+
+  <section class="paintings">
+    <div class="row">
+      <div class="paintings-col">
+        <img src="img/paint/paint0.png">
+      </div>
+      <div class="paintings-col">
+        <img src="img/paint/paint1.png">
+      </div>
+      <div class="paintings-col">
+        <img src="img/paint/paint2.png">
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="line">---------------</section>
+
+<section class="footer">
+  <h4>About me</h4>
+  <p>sdsdfa ef ef efe fe f  fwefwefwf we f  wefwefwfwfwefwf </p>
+  <div class="icon">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+  </div>
+  <p>Made with <i class="fa fa-heart-o"></i> by LeON</p>
+</section>
+
+  
+<!------JavaScript For Toggle Menu----- -->
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+      navLinks.style.right = "-200px";
+      
+    }
+</script>
+
+</body>
+</html>

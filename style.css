@@ -1,0 +1,426 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.header
+{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(img/_The_School_of_Athens.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img{
+  width: 150px;
+  position: fixed;
+  z-index: 3;
+}
+
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a
+{
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links ul li::after
+{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #FF0000;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after
+{
+  width: 100%;
+}
+.text-box
+{
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.text-box h0{
+  font-size: 62px;
+  top: 22px;
+  font-weight: 700;
+}
+.text-box h1{
+  font-size: 62px;
+  color: #FF0000
+  ;
+}
+.text-box p{
+  margin: 10px,0px,40;
+  font-size: 14;
+  color: #fff;
+}
+.hero-btn
+{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 3px solid #FF0000;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position:relative;
+  cursor: pointer;
+  
+}
+.hero-btn:hover{
+  border: 3px solid #FF0000;
+  background: #FF0000;
+  
+  transition: 1s;
+}
+
+nav .fa{
+  display: none;
+}
+
+@media(max-width: 700px) {
+  .text-box h1{
+    font-size: 30px;
+  }
+  .nav-links ul li{
+    display: block;
+    color: #FF0000;
+    font-weight: 800;
+  }
+  .nav-links ul li a{
+    color: #FF0000;
+  }
+  .nav-links{
+    position: fixed;
+    background: #000;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 0.7s;
+  }
+  nav .fa{
+    display: block;
+    color: #FF0000;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul{
+    padding: 30px;
+    color: #FF0000;
+  }
+  .nav-links ul li{
+    padding: 20px;
+    color: #FF0000;
+    
+  }
+  nav .icon .fa{
+    
+    color: #FF0000;
+    position: relative;
+    left: 35px;
+  }
+}
+
+
+/*Hobbies*/
+.hobby{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: #FF0000;
+}
+h1{
+  font-size: 36px;
+  font-weight: 600;
+}
+p{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.line{
+  text-align: center;
+  background-color: #000;
+  color: #FF0000;
+  
+} 
+
+.row{
+  margin: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.hobby-col{
+  flex-basis: 31%;
+  background: #FF0000;
+  border-radius: 10px;
+  border: 7px solid #000;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 1s;
+}
+h3{
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.hobby-col:hover{
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+  border: 7px solid #FF0000;
+  background: #000;
+}
+
+@media(max-width: 700px){
+  .row{
+    flex-direction: column;
+  }
+}
+
+.footer{
+  width: 100%;
+  text-align: center;
+  padding: 1px 0;
+  background: #FF0000;
+}
+.footer h4{
+  margin-bottom: 1px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+.footer p{
+  color: #000;
+}
+.icon .fa{
+  color: #fff;
+  margin: 0 13px;
+
+  cursor: pointer;
+  padding: 1px 0;
+}
+.fa-heart-o{
+  color: #fff;
+}
+
+
+.history{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  background: #000;
+}
+.history-col{
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.history-col img{
+  width: 70%;
+  border: 10px solid #FF0000;
+  border-radius: 10px;
+}
+.history h1{
+  color: #FF0000;
+  font-weight: 800;
+  font-size: 60px;
+  
+}
+.history p{
+  color: #FF0000;
+  font-size: 50px;
+  font-weight: 800;
+}
+.layer{
+  background: transparent;
+  height: 100%;
+  width: 70%;
+  position: absolute;
+  top: 0;
+  left: 15%;
+  
+  transition: 0.5s;
+}
+.layer h3{
+  position: relative;
+  text-align: center;
+  top: 50%;
+  color: #fff;
+  
+}
+.layer:hover{
+  background: rgba(253,0,0,0.5);
+  transform: translateY(-10px);
+}
+
+
+
+
+
+
+/*ABOUT*/
+
+/*paintings*/
+.paintings{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: #000;
+}
+.paintings-col{
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.paintings-col img{
+  width: 70%;
+}
+
+
+/*resource--res*/
+.res{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: #000;
+}
+.res h1{
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+}
+
+p{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.res-col{
+  flex-basis: 31%;
+  background: #000;
+  border-radius: 10px;
+  border: 7px solid #FF0000;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 1s;
+}
+h3{
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #fff;
+}
+.res-col:hover{
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+  border: 7px solid #fff;
+  background: #000;
+  transform: translateY(-10px);
+}
+
+
+/*div-line 分割线*/
+.div-line{
+  background: #FF0000;
+  color: #FF0000;
+  height: 5px;
+}
+
+/*resource chat gpt*/
+.chatgpt{
+  position: relative;
+  top: 0%;
+  left: 0;
+  background: #000;
+}
+
+.chatgpt h1{
+  color: #fff;
+  text-align: center;
+}
+
+.chatgpt p{
+  text-align: center;
+}
+
+/*resource Books*/
+.books{
+  position: relative;
+  top: 0%;
+  left: 0;
+  background: #000;
+}
+
+.books h1{
+  color: #fff;
+  text-align: center;
+}
+
+.books p{
+  text-align: center;
+}
+
+/*resource chat gpt*/
+.games{
+  position: relative;
+  top: 0%;
+  left: 0;
+  background: #000;
+}
+
+.games h1{
+  color: #fff;
+  text-align: center;
+}
+
+.games p{
+  text-align: center;
+}
+ 
